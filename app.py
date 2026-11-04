@@ -44,6 +44,10 @@ def index():
     """
     return html
 
+@app.route('/health')
+def health():
+    return "SYSTEM STATUS: OK", 200
+
 if __name__ == '__main__':
     print("Starting DumpsterFire Inc. PawsSwipe Server...")
     print("Attempting to bind to port 5000...")
