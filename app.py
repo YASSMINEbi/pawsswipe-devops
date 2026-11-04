@@ -29,7 +29,9 @@ def index():
             </style>
         </head>
         <body>
-            <h1>🐶 Welcome to PawsSwipe PRO (Verified Security) 🔒</h1>
+            <h1>🐶🐱 Welcome to PawsSwipe PRO: Dogs & Cats [SECURED] 🔒</h1>
+            <h2>Find your dog's perfect playdate.</h2>
+ feature/cat-mode
             <h2>Find your dog's perfect playdate.</h2>
             <br>
             <button class="btn">Swipe Right</button>
