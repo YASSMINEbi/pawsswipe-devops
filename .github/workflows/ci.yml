@@ -1,0 +1,34 @@
+name: PawsSwipe CI Butler
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    env:
+      DATABASE_URL: "sqlite:///ci_robot_test.db"
+
+    steps:
+      - name: 1. Checkout Code from GitHub
+        uses: actions/checkout@v4
+
+      - name: 2. Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: 3. Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 4. Run Automated Unit Tests (Pytest)
+        run: pytest
+
+      - name: 5. Verify Docker Image Builds (pawsswipe:v4)
+        run: docker build -t pawsswipe:v4 .
