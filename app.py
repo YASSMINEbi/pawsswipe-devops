@@ -29,7 +29,7 @@ def index():
             </style>
         </head>
         <body>
-            <h1>🐶 Welcome to PawsSwipe 🐶</h1>
+            <h1>🐶🐱 Welcome to PawsSwipe: Dogs & Cats Edition 🐱🐶</h1>
             <h2>Find your dog's perfect playdate.</h2>
             <br>
             <button class="btn">Swipe Right</button>
